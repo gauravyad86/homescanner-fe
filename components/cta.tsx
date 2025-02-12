@@ -34,14 +34,14 @@ export default function Cta() {
               Register for early access
             </h2>
             <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
-              <a
-                className="btn group mb-4 w-full bg-gradient-to-t hover:bg-amber-950 bg-[#83d454] bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                href="/contactUs"
-              >
-                <span className="relative inline-flex items-center">
-                  Start Free Trial{" "}
-                </span>
-              </a>
+            <a
+              className="btn group mb-4 w-full bg-gradient-to-t hover:bg-blue-700 bg-[#83d454] bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
+              href="/contactUs"
+            >
+              <span className="relative inline-flex items-center">
+                Start Free Trial{" "}
+              </span>
+            </a>
             </div>
           </div>
         </div>

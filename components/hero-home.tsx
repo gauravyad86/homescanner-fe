@@ -37,9 +37,6 @@ export default function HeroHome() {
                     </div>
                   </div>
                 </h1>
-                <div className="w-fit mx-auto mt-4 px-4 py-1 bg-yellow-200 text-yellow-800 rounded-full font-semibold shadow-md">
-                  Beta
-                </div>
               </div>
               <h1></h1>
               <div className="mx-auto max-w-3xl">
@@ -50,6 +47,9 @@ export default function HeroHome() {
                 >
                   Search to visit 10 times faster and simpler
                 </p>
+                <div className="w-fit mx-auto mt-4 px-4 py-1 bg-yellow-200 text-yellow-800 text-3xl rounded-full font-semibold shadow-md">
+                  Beta Launch
+                </div>
                 <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]"></div>
               </div>
             </div>
@@ -96,7 +96,7 @@ export default function HeroHome() {
                     Number of properties checked
                   </div>
                   <div className="p-4 border-r border-b">500+</div>
-                  <div className="p-4 border-r border-b">{`< 50000`}</div>
+                  <div className="p-4 border-r border-b">{`> 50000`}</div>
                 </div>
                 <div className="grid grid-cols-3 text-center hover:bg-gray-50 transition-colors">
                   <div className="p-4 border-r border-b">
@@ -114,7 +114,7 @@ export default function HeroHome() {
                 </div>
                 <div className="grid grid-cols-3 text-center hover:bg-gray-50 transition-colors">
                   <div className="p-4 border-r border-b">
-                    Tracking new listing in selected places
+                    Track new listing in selected places
                   </div>
                   <div className="p-4 border-r border-b">Manual</div>
                   <div className="p-4 border-r border-b">Automated</div>

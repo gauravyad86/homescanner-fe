@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import mainLogo from "@/public/images/homeScannerLogo.jpg";
+import mainLogo from "@/public/images/homescanner_footer.png";
 
 export default function Footer({ border = false }: { border?: boolean }) {
   return (
@@ -14,7 +14,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
           {/* 1st block */}
           <div className="space-y-2 text-center sm:text-left sm:col-span-12 lg:col-span-4">
             <div className="flex justify-center sm:justify-start">
-              <Image className="rounded-full" src={mainLogo} alt="main-logo" width={90} height={90} />
+              <Image src={mainLogo} alt="main-logo" width={120} height={120} />
             </div>
             <div className="text-base sm:text-lg lg:text-xl text-gray-600">
               &copy; homescanner - All rights reserved.

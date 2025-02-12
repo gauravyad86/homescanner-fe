@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import mainlogo from "@/public/images/homescannerLogo.png";
+import mainlogo from "@/public/images/homescanner_footer.png";
 
 const AuthFooter = () => {
   return (

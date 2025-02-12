@@ -26,7 +26,6 @@ export default function Home() {
         },
       },
       color: {
-        // value: ["#FFE34F", "#4FA0FF", "#FF9519", "#2DD702", "#FF1F00"],
         value: ["#4FA0FF", "#C0C0C0", "#808080", "#2DD702"],
       },
       shape: {
@@ -93,20 +92,32 @@ export default function Home() {
           <div className="">
             <BusinessCategories />
           </div>
-          {/* Full width slider section */}
           <div className="mt-[80px] lg:block hidden relative left-[50%] right-[50%] mx-[-50vw] w-screen">
-            <h2 className="my-[15px] text-[40px] font-bold text-center text-[#477dd7]">All listings in one place</h2>
+            <h2 className="text-3xl font-bold text-[#477dd7] text-center sm:mb-0 md:text-5xl">1. All listings in one place - Meta Search</h2>
+            <h3 className="text-lg font-semibold text-grey-400 text-center mt-2 md:text-3xl">compare prices, pictures, videos, amenities and ratings</h3>
+            <h3 className="text-base font-medium text-green-500 text-center mt-1 md:text-4xl">for 10+ online sites and offline channels</h3>
             <SliderAnimation />
           </div>
           <div className='my-[180px]'>
             <FeaturesPlanet />
           </div>
           <LargeTestimonial />
-          <video autoPlay loop muted playsInline className="w-full h-auto">
+          <div className="text-center mb-6">
+            <h2 className="text-5xl font-bold text-[#477dd7]">Save Time. Save Money</h2>
+            <p className="text-4xl font-bold text-green-500 mt-2">welcome homescanner, goodbye trouble</p>
+          </div>
+          {/* <video autoPlay loop muted playsInline className="w-full h-auto mb-20">
+            <source src="/video/HomeScanner.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video> */}
+          <video autoPlay loop muted playsInline className="w-full h-auto rounded-3xl border-4 border-white-1000 shadow-lg -mb-20">
             <source src="/video/HomeScanner.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <Cta />
+                    {/* <Cta /> */}
+          <div className="mt-10">
+            <Cta />
+          </div>
         </div>
       </div>
     </div>
