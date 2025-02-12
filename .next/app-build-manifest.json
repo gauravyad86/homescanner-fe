@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/(screens)/map/page": [
+    "/(screens)/shortlist/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(screens)/map/page.js"
+      "static/chunks/app/(screens)/shortlist/page.js"
     ],
     "/(screens)/layout": [
       "static/chunks/webpack.js",
@@ -17,26 +17,17 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/(screens)/places/page": [
+    "/(default)/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/(screens)/places/page.css",
-      "static/chunks/app/(screens)/places/page.js"
+      "static/css/app/(default)/page.css",
+      "static/chunks/app/(default)/page.js"
     ],
-    "/(screens)/search/page": [
+    "/(default)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(screens)/search/page.js"
-    ],
-    "/(screens)/shortlist/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(screens)/shortlist/page.js"
-    ],
-    "/(screens)/connect/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(screens)/connect/page.js"
+      "static/css/app/(default)/layout.css",
+      "static/chunks/app/(default)/layout.js"
     ]
   }
 }

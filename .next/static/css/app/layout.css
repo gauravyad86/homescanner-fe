@@ -1941,6 +1941,9 @@ input[type="search"]::-webkit-search-results-decoration {
 }.hover\:bg-red-600:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity, 1));
+}.hover\:bg-blue-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
 }.hover\:bg-\[length\:100\%_150\%\]:hover{
   background-size: 100% 150%;
 }.hover\:text-black:hover{

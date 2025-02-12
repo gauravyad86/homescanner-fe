@@ -1,7 +1,4 @@
 {
-  "/(screens)/map/page": "app/(screens)/map/page.js",
-  "/(screens)/places/page": "app/(screens)/places/page.js",
-  "/(screens)/search/page": "app/(screens)/search/page.js",
-  "/(screens)/connect/page": "app/(screens)/connect/page.js",
-  "/(screens)/shortlist/page": "app/(screens)/shortlist/page.js"
+  "/(screens)/shortlist/page": "app/(screens)/shortlist/page.js",
+  "/(default)/page": "app/(default)/page.js"
 }
