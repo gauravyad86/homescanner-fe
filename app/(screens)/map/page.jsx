@@ -1,10 +1,15 @@
-
 "use client";
 import React, { useState, useRef } from "react";
-import { GoogleMap, Autocomplete, Marker, useJsApiLoader } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  Autocomplete,
+  Marker,
+  useJsApiLoader,
+} from "@react-google-maps/api";
 import { Search } from "lucide-react";
 import dynamic from "next/dynamic";
 import { useCombinedContext } from "@/app/context/CombinedContext";
+
 const center = {
   lat: 28.6139,
   lng: 77.209,
@@ -13,9 +18,18 @@ const center = {
 const sampleData = {
   location: "New Delhi",
   coordinates: "82.88 N, 22.22 E",
-  address: "B-40, Jia Sarai, IIT Delhi Main Road, Hauz Khas, New Delhi, 110011",
+  address:
+    "B-40, Jia Sarai, IIT Delhi Main Road, Hauz Khas, New Delhi, 110011",
   totalArea: "0.020 Dc = 900 Sq Ft",
-  details: ["Metro", "School", "Govt Office", "Police Station", "Hospital", "Map", "Media"],
+  details: [
+    "Metro",
+    "School",
+    "Govt Office",
+    "Police Station",
+    "Hospital",
+    "Map",
+    "Media",
+  ],
 };
 
 const GoogleMapComponent = ({ locations = [], search = false }) => {
@@ -48,17 +62,19 @@ const GoogleMapComponent = ({ locations = [], search = false }) => {
       {/* Sidebar: Search & Results */}
       <div className="w-full md:w-1/4 bg-white p-4 border-r overflow-y-auto">
         {/* Search Bar */}
-        {search == false && <div className="relative mb-4">
-          <Autocomplete onLoad={setAutocomplete} onPlaceChanged={handlePlaceChanged}>
-            <input
-              type="text"
-              ref={inputRef}
-              placeholder="Search a place..."
-              className="border p-2 pr-10 rounded-full pl-4 w-full"
-            />
-          </Autocomplete>
-          <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
-        </div>}
+        {search === false && (
+          <div className="relative mb-4">
+            <Autocomplete onLoad={setAutocomplete} onPlaceChanged={handlePlaceChanged}>
+              <input
+                type="text"
+                ref={inputRef}
+                placeholder="Search a place..."
+                className="border p-2 pr-10 rounded-full pl-4 w-full"
+              />
+            </Autocomplete>
+            <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
+          </div>
+        )}
 
         {/* Results */}
         <div className="mt-4">
@@ -70,7 +86,7 @@ const GoogleMapComponent = ({ locations = [], search = false }) => {
               </div>
             ))
           ) : (
-            search == false && <LocationCard sampleData={sampleData} />
+            search === false && <LocationCard sampleData={sampleData} />
           )}
         </div>
       </div>
@@ -93,9 +109,6 @@ const GoogleMapComponent = ({ locations = [], search = false }) => {
     </div>
   );
 };
-
-// Use dynamic import to prevent SSR
-export default dynamic(() => Promise.resolve(GoogleMapComponent), { ssr: false });
 
 const LocationCard = ({ sampleData }) => {
   const { addToFavorites } = useCombinedContext();
@@ -124,17 +137,28 @@ const LocationCard = ({ sampleData }) => {
   return (
     <div className="p-4 border rounded bg-gray-100">
       <h2 className="text-lg font-bold">{sampleData.location}</h2>
-      <p><strong>Coordinates:</strong> {sampleData.coordinates}</p>
-      <p><strong>Address:</strong> {sampleData.address}</p>
-      <p><strong>Total Area:</strong> {sampleData.totalArea}</p>
-      <p><strong>Details:</strong></p>
+      <p>
+        <strong>Coordinates:</strong> {sampleData.coordinates}
+      </p>
+      <p>
+        <strong>Address:</strong> {sampleData.address}
+      </p>
+      <p>
+        <strong>Total Area:</strong> {sampleData.totalArea}
+      </p>
+      <p>
+        <strong>Details:</strong>
+      </p>
       <ul className="list-disc ml-5">
         {sampleData.details.map((detail, index) => (
           <li key={index}>{detail}</li>
         ))}
       </ul>
 
-      <button className="mt-3 px-4 py-2 bg-blue-500 text-white rounded w-full" onClick={() => setShowPopup(true)}>
+      <button
+        className="mt-3 px-4 py-2 bg-blue-500 text-white rounded w-full"
+        onClick={() => setShowPopup(true)}
+      >
         Add to Places
       </button>
 
@@ -165,7 +189,15 @@ const LocationCard = ({ sampleData }) => {
           </div>
         </div>
       )}
-
     </div>
   );
 };
+
+const DynamicGoogleMapComponent = dynamic(
+  () => Promise.resolve(GoogleMapComponent),
+  { ssr: false }
+);
+
+export default function MapPage() {
+  return <DynamicGoogleMapComponent locations={[]} search={false} />;
+}
