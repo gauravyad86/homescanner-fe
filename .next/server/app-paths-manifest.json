@@ -1,4 +1,3 @@
 {
-  "/(screens)/shortlist/page": "app/(screens)/shortlist/page.js",
   "/(default)/page": "app/(default)/page.js"
 }

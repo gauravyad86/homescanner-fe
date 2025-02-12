@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   const handleTeam = () => {
-    window.location.href = "https://stamper.ai";
+    window.open("https://stamper.ai", "_blank");
   };
 
   return (
