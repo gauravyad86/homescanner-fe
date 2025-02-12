@@ -12,7 +12,7 @@ import { useCombinedContext } from "@/app/context/CombinedContext";
 
 const center = {
   lat: 28.6139,
-  lng: 77.209,
+  lng: 77.209, 
 };
 
 const sampleData = {
