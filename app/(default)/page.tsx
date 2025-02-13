@@ -10,7 +10,9 @@ import Hero from "@/components/hero-home";
 import BusinessCategories from "@/components/business-categories";
 import FeaturesPlanet from "@/components/features-planet";
 import LargeTestimonial from "@/components/large-testimonial";
+import ImageCarousel from '@/components/carousel';
 import Cta from "@/components/cta";
+
 export default function Home() {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
@@ -101,20 +103,23 @@ export default function Home() {
           <div className='my-[180px]'>
             <FeaturesPlanet />
           </div>
+          <div className="mt-[80px] text-center">
+            <h2 className="text-3xl font-bold text-[#477dd7] md:text-5xl">Launching on Play Store Soon</h2>
+            <h3 className="text-lg font-semibold text-grey-400 mt-2 md:text-3xl">Join now for early access & perks</h3>
+            <h3 className="text-base font-medium text-green-500 mt-1 md:text-4xl">Experience the future of home search</h3>
+          </div>
+          <div className="my-20">
+            <ImageCarousel />
+          </div>
           <LargeTestimonial />
           <div className="text-center mb-6">
             <h2 className="text-5xl font-bold text-[#477dd7]">Save Time. Save Money</h2>
             <p className="text-4xl font-bold text-green-500 mt-2">welcome homescanner, goodbye trouble</p>
           </div>
-          {/* <video autoPlay loop muted playsInline className="w-full h-auto mb-20">
-            <source src="/video/HomeScanner.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video> */}
           <video autoPlay loop muted playsInline className="w-full h-auto rounded-3xl border-4 border-white-1000 shadow-lg -mb-20">
             <source src="/video/HomeScanner.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-                    {/* <Cta /> */}
           <div className="mt-10">
             <Cta />
           </div>
