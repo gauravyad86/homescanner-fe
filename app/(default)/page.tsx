@@ -11,6 +11,7 @@ import BusinessCategories from "@/components/business-categories";
 import FeaturesPlanet from "@/components/features-planet";
 import LargeTestimonial from "@/components/large-testimonial";
 import Cta from "@/components/cta";
+import ImageCarousel from '@/components/carousel';
 export default function Home() {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
@@ -101,7 +102,8 @@ export default function Home() {
           <div className='my-[180px]'>
             <FeaturesPlanet />
           </div>
-          <LargeTestimonial />
+          <ImageCarousel/>
+          {/* <LargeTestimonial /> */}
           <div className="text-center mb-6">
             <h2 className="text-5xl font-bold text-[#477dd7]">Save Time. Save Money</h2>
             <p className="text-4xl font-bold text-green-500 mt-2">welcome homescanner, goodbye trouble</p>

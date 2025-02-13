@@ -1,4 +1,4 @@
-// File: /Users/gauravyadav/Downloads/Home-Scanner/homescanner-fe/app/(screens)/map/page.jsx
+// File: D:\homescanner.ai\homescanner_2\homescanner-fe\app\(screens)\map\page.jsx
 import * as entry from '../../../../../app/(screens)/map/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
