@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X, Heart } from "lucide-react";
 import Link from "next/link";
-import UserProfile from "../../app/(screens)/user/user"
+import UserProfile from "../../app/(screens)/user/user";
 import Image from "next/image";
 import mainlogo from "@/public/images/homescannerLogo.png";
 
@@ -41,7 +41,10 @@ const AuthHeader = () => {
                     ))}
                 </nav>
                 <div className="flex items-center gap-4">
-                    <div className=" md:flex">
+                    <div className="hidden md:flex items-center gap-2">
+                        <div className="bg-yellow-300 text-red-500 rounded px-2 py-1">
+                            Demo Product
+                        </div>
                         <UserProfile />
                     </div>
                     <button

@@ -243,7 +243,7 @@ const RealEstateSearch = () => {
   const [chatMessages, setChatMessages] = useState([
     {
       sender: "homescanner",
-      text: "Welcome to Homescanner! Where are you looking to find properties today?"
+      text: "Welcome to Homescanner! Where are you looking to find properties today?<br/><span style='color:Brown;'>This is a demo version of the product. Please register for early access.<br/>Currently serving invite only to limited users, be an early applicant!</span>"
     }
   ]);
   const [inputValue, setInputValue] = useState("");
@@ -300,7 +300,7 @@ const RealEstateSearch = () => {
   };
   const queryGemini = async (prompt) => {
     if (!process.env.NEXT_PUBLIC_GEMINI_API_KEY) {
-      return '{"city": "Delhi", "locality": "Saket", "certainty": "high", "needsClarification": false}';
+      return '{"city": "Delhi", "locality": "Saket", "latitude": "28.6139", "longitude": "77.2090", "certainty": "high", "needsClarification": false}';
     }
     try {
       const response = await fetch(
@@ -317,7 +317,7 @@ const RealEstateSearch = () => {
       );
     } catch (error) {
       console.error("API error:", error);
-      return '{"city": "Delhi", "locality": "Saket", "certainty": "high", "needsClarification": false}';
+      return '{"city": "Delhi", "locality": "Saket", "latitude": "28.6139", "longitude": "77.2090", "certainty": "high", "needsClarification": false}';
     }
   };
   const handleGeneralQuery = (userMessage) => {
@@ -349,31 +349,35 @@ const RealEstateSearch = () => {
 1. Primary city (prioritize official names)
 2. Primary locality/neighborhood
 3. If only locality is given, determine most likely city
-
-Follow these rules:
-- Convert abbreviations to full names (Delhi > New Delhi)
-- Map common names to official names (Bangalore > Bengaluru)
-- For standalone localities: Saket > Delhi, Bandra > Mumbai, Whitefield > Bengaluru
+4. Provide approximate latitude and longitude for the location
 
 Respond with JSON: { 
-  city?: string, 
-  locality?: string, 
-  certainty: "high"|"medium"|"low",
-  needsClarification?: boolean
-}
-
-Examples:
-- "Saket" → { "city": "Delhi", "locality": "Saket", "certainty": "high" }
-- "Flats in Andheri" → { "city": "Mumbai", "locality": "Andheri West", "certainty": "high" }
-- "Pune" → { "city": "Pune", "certainty": "high" }`;
+  "city": string, 
+  "locality"?: string, 
+  "latitude": string, 
+  "longitude": string, 
+  "certainty": "high"|"medium"|"low",
+  "needsClarification"?: boolean
+}`;
     try {
       const response = await queryGemini(enhancementPrompt);
       const jsonStart = Math.max(response.indexOf("{"), 0);
       const jsonEnd = Math.min(response.lastIndexOf("}") + 1, response.length);
-      return JSON.parse(response.slice(jsonStart, jsonEnd));
+      const locationData = JSON.parse(response.slice(jsonStart, jsonEnd));
+      if (!locationData.latitude || !locationData.longitude) {
+        locationData.latitude = "28.6139";
+        locationData.longitude = "77.2090";
+      }
+      return locationData;
     } catch (error) {
-      console.error("Location parsing error:", error);
-      return { city: "", locality: "", certainty: "low", needsClarification: true };
+      return {
+        city: "",
+        locality: "",
+        latitude: "28.6139",
+        longitude: "77.2090",
+        certainty: "low",
+        needsClarification: true
+      };
     }
   };
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -565,13 +569,8 @@ Examples:
       setLoading(false);
       return;
     }
-    const cityCoordinates = {
-      Delhi: [28.6139, 77.2090],
-      Pune: [18.5204, 73.8567],
-      Mumbai: [19.076, 72.8777],
-      Bengaluru: [12.9716, 77.5946]
-    };
-    const [baseLat, baseLng] = cityCoordinates[locationData.city] || [28.6139, 77.2090];
+    const baseLat = parseFloat(locationData.latitude) || 28.6139;
+    const baseLng = parseFloat(locationData.longitude) || 77.2090;
     const listings = dummyData.map((property) => {
       const offsetLat = (Math.random() - 0.5) * 0.02;
       const offsetLng = (Math.random() - 0.5) * 0.02;
@@ -630,9 +629,6 @@ Examples:
             onChange={(e) => setSearchQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
           />
-        </div>
-        <div className="absolute bottom-4 left-4 z-[1000] bg-white p-1 rounded shadow-md text-xs">
-          Demo Product
         </div>
         <DynamicMapContainer center={mapCenter} zoom={mapZoom} className="h-full w-full">
           <RecenterAutomatically center={mapCenter} zoom={mapZoom} />
@@ -700,7 +696,7 @@ Examples:
               <p className="font-semibold">
                 {msg.sender === "homescanner" ? "Homescanner" : "You"}
               </p>
-              <p className="whitespace-pre-wrap">{msg.text}</p>
+              <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: msg.text }}></div>
             </div>
           ))}
           {selectedProperty && (

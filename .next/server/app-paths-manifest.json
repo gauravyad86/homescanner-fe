@@ -1,3 +1,5 @@
 {
+  "/(screens)/map/page": "app/(screens)/map/page.js",
+  "/(default)/page": "app/(default)/page.js",
   "/(screens)/places/page": "app/(screens)/places/page.js"
 }
