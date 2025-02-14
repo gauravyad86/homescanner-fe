@@ -1,4 +1,4 @@
-// File: /Users/gauravyadav/Downloads/Home-Scanner/homescanner-fe/app/(default)/page.tsx
+// File: D:\homescanner.ai\homescanner-fe\app\(default)\page.tsx
 import * as entry from '../../../../app/(default)/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
