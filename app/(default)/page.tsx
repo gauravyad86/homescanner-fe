@@ -12,8 +12,6 @@ import FeaturesPlanet from "@/components/features-planet";
 import LargeTestimonial from "@/components/large-testimonial";
 import ImageCarousel from '@/components/carousel';
 import Cta from "@/components/cta";
-import FAQSection from "@/components/faqs";
-import Footer from '@/components/ui/footer';
 
 export default function Home() {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -124,9 +122,6 @@ export default function Home() {
           </video>
           <div className="mt-10">
             <Cta />
-          </div>
-          <div className="mt-10">
-            <FAQSection />
           </div>
         </div>
       </div>
