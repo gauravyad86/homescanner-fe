@@ -17,38 +17,6 @@
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
-    ],
-    "/(screens)/map/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(screens)/map/page.js"
-    ],
-    "/(screens)/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/(screens)/layout.css",
-      "static/chunks/app/(screens)/layout.js"
-    ],
-    "/(screens)/connect/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(screens)/connect/page.js"
-    ],
-    "/(screens)/search/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(screens)/search/page.js"
-    ],
-    "/(screens)/places/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/(screens)/places/page.css",
-      "static/chunks/app/(screens)/places/page.js"
-    ],
-    "/(screens)/shortlist/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(screens)/shortlist/page.js"
     ]
   }
 }

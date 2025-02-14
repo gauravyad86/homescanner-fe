@@ -1,4 +1,4 @@
-// File: /Users/gauravyadav/Downloads/Home-Scanner/homescanner-fe/app/(default)/layout.tsx
+// File: D:\homescanner.ai\homescanner-fe\app\(default)\layout.tsx
 import * as entry from '../../../../app/(default)/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
