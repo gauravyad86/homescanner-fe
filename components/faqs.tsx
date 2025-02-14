@@ -47,7 +47,6 @@ export default function FAQSection(): JSX.Element {
       <h2 className="mb-6 text-4xl font-bold text-[#477dd7] md:mb-12 md:text-4xl text-center">
         Frequently Asked Questions
       </h2>
-
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div
@@ -65,7 +64,6 @@ export default function FAQSection(): JSX.Element {
                 <FaPlus className="text-green-500" />
               )}
             </button>
-
             <Transition
               show={openIndex === index}
               enter="transition ease-out duration-300"
