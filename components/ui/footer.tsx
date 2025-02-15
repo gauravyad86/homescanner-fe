@@ -15,8 +15,7 @@ const Footer = () => {
           <p className="mt-4 text-neutral-400">Registered By:</p>
           <p className="text-neutral-400 font-semibold">HOMESCANNER PRIVATE LIMITED</p>
           <p className="mt-4 text-neutral-400">Office Address:</p>
-          <p className="text-neutral-400">Sector 27, Near IIT DELHI, Hauz Khas , 110016</p>
-          <p className="mt-4 text-neutral-400">Call Us:</p>
+          <p className="text-neutral-400">Sector 27, Near IIT DELHI, Hauz Khas, 110016</p>
         </div>
 
         {/* Middle Section */}
@@ -36,31 +35,13 @@ const Footer = () => {
               <FaInstagram className="text-3xl cursor-pointer text-pink-500" />
             </Link>
             </div>
-          <div className="mt-12">
-            <p className="text-2xl font-normal text-gray-500">Site Links</p>
-            <div className="flex flex-col justify-center gap-4 mt-4">
-              <Link href="" className="hover:text-black cursor-pointer" >For Tenants</Link>
-              <Link href="" className="hover:text-black cursor-pointer">For Landlord</Link>
-              <Link href="" className="hover:text-black cursor-pointer">About Us</Link>
-              <Link href="" className="hover:text-black cursor-pointer">Blogs</Link>
-            </div>
-          </div>
         </div>
 
         {/* Right Section */}
         <div className="relative left-16">
-          <p className="text-lg font-semibold">Grievance Cell</p>
-          <p className="text-black mt-2">Vishal Das Saini (Grievance Officer)</p>
-          <p className="flex items-center gap-2 text-gray-400 mt-2">
-            <AiOutlinePhone className="text-xl" /> +91 93542-35813
-          </p>
 
           <div className="mt-6">
-            <p className="text-lg font-semibold">Download Our App:</p>
-            <div className="flex gap-4 mt-3">
-              <FaApple className="text-4xl cursor-pointer hover:text-gray-300" />
-              <FaGooglePlay className="text-4xl cursor-pointer hover:text-gray-300" />
-            </div>
+            <p className="text-lg font-semibold">Download Our App: Coming Soon</p>
           </div>
         </div>
       </div>
