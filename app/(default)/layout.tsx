@@ -24,7 +24,7 @@ export default function DefaultLayout({
     <>
       <Header />
       <main className="grow">{children}</main>
-      <Footer border={true} />
+      <Footer />
     </>
   );
 }
