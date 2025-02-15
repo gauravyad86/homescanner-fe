@@ -1,3 +1,5 @@
 {
-  "/(default)/page": "app/(default)/page.js"
+  "/(default)/page": "app/(default)/page.js",
+  "/(screens)/map/page": "app/(screens)/map/page.js",
+  "/(screens)/connect/page": "app/(screens)/connect/page.js"
 }
