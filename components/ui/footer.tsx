@@ -15,9 +15,8 @@ const Footer = () => {
           <p className="mt-4 text-neutral-400">Registered By:</p>
           <p className="text-neutral-400 font-semibold">HOMESCANNER PRIVATE LIMITED</p>
           <p className="mt-4 text-neutral-400">Office Address:</p>
-          <p className="text-neutral-400">Sector 27, Near IIT DELHI, Gurgaon, 122001</p>
+          <p className="text-neutral-400">Sector 27, Near IIT DELHI, Hauz Khas , 110016</p>
           <p className="mt-4 text-neutral-400">Call Us:</p>
-          <p className="text-black">+91 83683 76123 &nbsp; +91 75052 03489 &nbsp; +91 70076 72505</p>
         </div>
 
         {/* Middle Section */}
@@ -54,9 +53,6 @@ const Footer = () => {
           <p className="text-black mt-2">Vishal Das Saini (Grievance Officer)</p>
           <p className="flex items-center gap-2 text-gray-400 mt-2">
             <AiOutlinePhone className="text-xl" /> +91 93542-35813
-          </p>
-          <p className="flex items-center gap-2 text-gray-400 mt-2">
-            <AiOutlineMail className="text-xl" /> support@circlepe.com
           </p>
 
           <div className="mt-6">
