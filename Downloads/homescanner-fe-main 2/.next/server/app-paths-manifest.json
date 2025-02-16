@@ -1,4 +1,0 @@
-{
-  "/(default)/page": "app/(default)/page.js",
-  "/(screens)/places/page": "app/(screens)/places/page.js"
-}
