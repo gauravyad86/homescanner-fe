@@ -11,7 +11,7 @@ export default function ProductDemo() {
 
   return (
     <div className="w-full my-20">
-      <h1 className="w-full py-4 text-center text-2xl font-bold text-[#477dd7]">
+      <h1 className="w-full py-4 text-center text-5xl font-bold text-[#477dd7]">
         Product Demo Videos
       </h1>
 
