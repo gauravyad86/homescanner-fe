@@ -106,9 +106,9 @@ export default function Home() {
             <FeaturesPlanet />
           </div>
           <div className="mt-[80px] text-center">
-            <h2 className="text-3xl font-bold text-[#477dd7] md:text-5xl">2. AI Personal Staff for Everything...</h2>
+            {/* <h2 className="text-3xl font-bold text-[#477dd7] md:text-5xl">2. AI Personal Staff for Everything...</h2>
             <h3 className="text-lg font-semibold text-grey-400 mt-2 md:text-3xl">Let AI handle the hard work while you focus on living.</h3>
-            <h3 className="text-base font-medium text-green-500 mt-1 md:text-4xl">Experience efficiency like never before.</h3>
+            <h3 className="text-base font-medium text-green-500 mt-1 md:text-4xl">Experience efficiency like never before.</h3> */}
           </div>
           <div className='my-20'>
             <ProductDemo />
