@@ -126,6 +126,13 @@ export default function HeroHome() {
                   </div>
                   <div className="p-4 border-r border-b">Automated</div>
                 </div>
+                <div className="grid grid-cols-3 text-center hover:bg-gray-50 transition-colors">
+                  <div className="p-4 border-r border-b">Spam call and privacy breach</div>
+                  <div className="p-4 border-r border-b">
+                    Yes
+                  </div>
+                  <div className="p-4 border-r border-b">No</div>
+                </div>
               </div>
             </div>
           </div>
