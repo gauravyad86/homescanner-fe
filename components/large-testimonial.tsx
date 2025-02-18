@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 export default function LargeTestimonial() {
   // Original video IDs; add more if needed.
-  const videoIds = ["togRbicQWEQ", "YS8wIpw01w4", "bfR0Q7dyhJo", "NMOtwUGzjFU"];
+  const videoIds = ["togRbicQWEQ", "YS8wIpw01w4", "bfR0Q7dyhJo", "NMOtwUGzjFU","ukhb6bYneik","hwLEMj6J9Lo"];
   const visibleCount = 3;
   // Extend the array by duplicating the first visibleCount items
   const extendedVideos = [...videoIds, ...videoIds.slice(0, visibleCount)];
