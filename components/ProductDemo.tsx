@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 export default function ProductDemo() {
-  const [status, setStatus] = useState("english");
+  const [status, setStatus] = useState("hindi");
 
   const handleClick = (e: string): void => {
     setStatus(e);
