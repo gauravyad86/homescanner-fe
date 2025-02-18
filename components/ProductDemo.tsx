@@ -55,9 +55,20 @@ export default function ProductDemo() {
             ></iframe>
           )}
           {status === "english" && (
+  <div className="w-[900px] h-[400px] mt-5 flex items-center justify-center text-xl text-gray-500 border-[3px] border-green-500 rounded-lg p-4">
+    We will be uploading soon
+  </div>
+)}
+{status === "tech" && (
+  <div className="w-[900px] h-[400px] mt-5  flex items-center justify-center text-xl text-gray-500 border-[3px] border-green-500 rounded-lg p-4">
+    We will be uploading soon
+  </div>
+)}
+
+{/*           {status === "english" && (
             <iframe
               className="flex-1"
-              src="https://www.youtube.com/embed/fP21A4_U3QI"
+              src="https://www.youtube.com/embed/iFmlr8jw5i0"
               title="English Videos"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -67,13 +78,14 @@ export default function ProductDemo() {
           {status === "tech" && (
             <iframe
               className="flex-1"
-              src="https://www.youtube.com/embed/fP21A4_U3QI"
+              src="https://www.youtube.com/embed/iFmlr8jw5i0"
               title="Tech Videos"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-          )}
+          )} */}
+          
         </div>
       </div>
     </div>
