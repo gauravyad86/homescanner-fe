@@ -118,7 +118,7 @@ export default function Home() {
             <p className="text-4xl font-bold text-green-500 mt-2">welcome homescanner, goodbye trouble</p>
           </div>
           <video autoPlay loop muted playsInline className="w-full h-auto rounded-3xl border-4 border-white-1000 shadow-lg -mb-20">
-            <source src="/video/HomeScanner.mp4" type="video/mp4" />
+            <source src="/video/HomeScanner_1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="mt-10">
