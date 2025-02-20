@@ -1,9 +1,16 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import PageIllustration from "@/components/page-illustration";
 import { LottiePlayer7 } from "@/components/lottiejson";
 import "./style.css";
 
 export default function HeroHome() {
+  const [waitlistedCount, setWaitlistedCount] = useState(null);
+  useEffect(() => {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/counter`)
+      .then((response) => response.json())
+      .then((data) => setWaitlistedCount(data.value));
+  }, []);
   return (
     <div className="scale-wrapper-3">
       <section className="relative">
@@ -13,9 +20,7 @@ export default function HeroHome() {
             <div className="text-center items-center justify-center">
               <div>
                 <h1 className="text-center mb-10">
-                  <div
-                    className="relative lg:h-[20vh] h-[15vh] flex w-[90%] lg:w-1/2 mx-auto bg-gray-50 rounded-full items-center justify-center text-gray-400 font-bold animate-border shadow-[inset_0_0_20px_rgba(0,0,0,0.3)]"
-                  >
+                  <div className="relative lg:h-[20vh] h-[15vh] flex w-[90%] lg:w-1/2 mx-auto bg-gray-50 rounded-full items-center justify-center text-gray-400 font-bold animate-border shadow-[inset_0_0_20px_rgba(0,0,0,0.3)]">
                     <div className="pb-5">
                       <span
                         className="lg:mr-1 mr-2 text-[40px] lg:text-[75px]"
@@ -50,6 +55,11 @@ export default function HeroHome() {
                 <div className="w-fit mx-auto mt-4 px-4 py-1 bg-yellow-200 text-yellow-800 text-3xl rounded-full font-semibold shadow-md">
                   Beta Launch
                 </div>
+                {waitlistedCount !== null && (
+                  <div className="mt-6 text-3xl font-bold" style={{ color: "#FFD700" }}>
+                    {waitlistedCount} waitlisted users
+                  </div>
+                )}
                 <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]"></div>
               </div>
             </div>
@@ -128,9 +138,7 @@ export default function HeroHome() {
                 </div>
                 <div className="grid grid-cols-3 text-center hover:bg-gray-50 transition-colors">
                   <div className="p-4 border-r border-b">Spam call and privacy breach</div>
-                  <div className="p-4 border-r border-b">
-                    Yes
-                  </div>
+                  <div className="p-4 border-r border-b">Yes</div>
                   <div className="p-4 border-r border-b">No</div>
                 </div>
               </div>
