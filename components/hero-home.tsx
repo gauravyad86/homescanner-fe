@@ -6,11 +6,13 @@ import "./style.css";
 
 export default function HeroHome() {
   const [waitlistedCount, setWaitlistedCount] = useState(null);
+
   useEffect(() => {
-    fetch("http://65.0.207.184:4001/api/counter")
+    fetch("/api/counter")
       .then((response) => response.json())
       .then((data) => setWaitlistedCount(data.value));
   }, []);
+
   return (
     <div className="scale-wrapper-3">
       <section className="relative">
@@ -20,7 +22,9 @@ export default function HeroHome() {
             <div className="text-center items-center justify-center">
               <div>
                 <h1 className="text-center mb-10">
-                  <div className="relative lg:h-[20vh] h-[15vh] flex w-[90%] lg:w-1/2 mx-auto bg-gray-50 rounded-full items-center justify-center text-gray-400 font-bold animate-border shadow-[inset_0_0_20px_rgba(0,0,0,0.3)]">
+                  <div
+                    className="relative lg:h-[20vh] h-[15vh] flex w-[90%] lg:w-1/2 mx-auto bg-gray-50 rounded-full items-center justify-center text-gray-400 font-bold animate-border shadow-[inset_0_0_20px_rgba(0,0,0,0.3)]"
+                  >
                     <div className="pb-5">
                       <span
                         className="lg:mr-1 mr-2 text-[40px] lg:text-[75px]"
@@ -135,11 +139,6 @@ export default function HeroHome() {
                     Hectic and Complicated
                   </div>
                   <div className="p-4 border-r border-b">Automated</div>
-                </div>
-                <div className="grid grid-cols-3 text-center hover:bg-gray-50 transition-colors">
-                  <div className="p-4 border-r border-b">Spam call and privacy breach</div>
-                  <div className="p-4 border-r border-b">Yes</div>
-                  <div className="p-4 border-r border-b">No</div>
                 </div>
               </div>
             </div>
