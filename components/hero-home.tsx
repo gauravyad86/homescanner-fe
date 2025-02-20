@@ -7,7 +7,7 @@ import "./style.css";
 export default function HeroHome() {
   const [waitlistedCount, setWaitlistedCount] = useState(null);
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/counter`)
+    fetch("http://65.0.207.184:4001/api/counter")
       .then((response) => response.json())
       .then((data) => setWaitlistedCount(data.value));
   }, []);
