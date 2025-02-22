@@ -1,1 +1,3 @@
-{}
+{
+  "/(screens)/connect/page": "app/(screens)/connect/page.js"
+}
