@@ -9,6 +9,9 @@ const nextConfig = {
       },
     ];
   },
+  images: {
+    domains: ["m.economictimes.com", "static.vecteezy.com"],
+  },
 };
 
 module.exports = nextConfig;
