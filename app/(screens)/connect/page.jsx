@@ -178,7 +178,7 @@ const Connect = () => {
       {/* Render only the active tab */}
       {activeTab === "Scheduled" && (
         <div className="w-full my-8">
-          <h2 className="text-2xl font-bold mb-4">Scheduled</h2>
+          {/* <h2 className="text-2xl font-bold mb-4">Scheduled</h2> */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4">
             {scheduledAgents.map((agent) => (
               <AgentBox
@@ -196,7 +196,7 @@ const Connect = () => {
 
       {activeTab === "Visited" && (
         <div className="w-full my-8">
-          <h2 className="text-2xl font-bold mb-4">Visited</h2>
+          {/* <h2 className="text-2xl font-bold mb-4">Visited</h2> */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4">
             {visitedAgents.map((agent) => (
               <AgentBox
